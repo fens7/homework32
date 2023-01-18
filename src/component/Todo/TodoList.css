@@ -1,0 +1,48 @@
+.todo-item {
+    margin-bottom: 4px;
+    background: rgb(51, 51, 51);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 6px;
+}
+
+.todo-logic {
+    width: 350px;
+    text-align: center;
+    margin: 50px auto 20px auto;
+    background: rgb(51, 51, 51);
+    color: white;
+    height: 150px;
+    padding: 6px;
+    border-radius: 12px;
+}
+
+.todo-item__wrapper {
+    width: 350px;
+    margin: 4px auto 10px auto;
+    color: white;
+    border-radius: 12px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(51, 51, 51);
+    color: white;
+    min-height: 80px;
+}
+
+.nav-item {
+    padding: 10px;
+    font-size: 25px;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: white;
+}

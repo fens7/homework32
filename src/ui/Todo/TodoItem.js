@@ -1,6 +1,11 @@
 import './TodoList.css';
+import { todosSelectors } from "../../engine/todos/TodoSelector"
+import { useSelector } from 'react-redux';
 
-function TodoItem({todos}) {
+
+function TodoItem() {
+    const todos = useSelector(todosSelectors.todos)
+
     return (
         <div className='todo-item__wrapper'>
             {todos.map((todo) => (
@@ -11,5 +16,4 @@ function TodoItem({todos}) {
         </div>
     );
 }
-
 export default TodoItem;

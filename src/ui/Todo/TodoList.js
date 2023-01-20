@@ -1,22 +1,16 @@
 import './TodoList.css';
 import React, { useState } from 'react';
 import TodoItem from './TodoItem';
-import { addTodo } from './todoSlice';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../engine/todos/thunk/addItem';
 
 function TodoList() {
     const [value, setValue] = useState('');
 
     const dispatch = useDispatch()
-    const todos = useSelector(state => state.todos.todos);
 
-    const addTask = (e) => {
-        e.preventDefault()
-        dispatch(addTodo([...todos, {
-            id: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER),
-            desc: value
-        }]))
-        setValue('')
+    const addTask = (event) => {
+        dispatch(addItem(event, value, setValue))
     }
 
     return (
@@ -37,7 +31,7 @@ function TodoList() {
                     </form>
                 </div>
             </div>
-            <TodoItem todos={todos}/>
+            <TodoItem/>
         </>
     );
 }
